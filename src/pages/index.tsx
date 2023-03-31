@@ -17,7 +17,7 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.description}>
           <p>
-            começando por aqui&nbsp;
+            começando porr aqui&nbsp;
             <code className={styles.code}>src/pages/index.tsx</code>
           </p>
           <div>
