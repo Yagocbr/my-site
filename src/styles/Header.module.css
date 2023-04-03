@@ -1,0 +1,31 @@
+.container {
+  height: 100vh;
+  background-color: #212121;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 59px;
+}
+
+.navigator {
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 55px;
+  display: flex;
+  column-gap: 10px;
+}
+
+.title div:first-child {
+  color: #fba820;
+}
+
+.menu {
+  display: flex;
+  column-gap: 20px;
+}
