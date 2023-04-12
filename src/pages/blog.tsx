@@ -17,7 +17,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <Header selectedMenu={PAGES.HOME.ID}></Header>
+        <Header selectedMenu={PAGES.BLOG.ID}></Header>
       </div>
     </>
   );

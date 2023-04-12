@@ -1,10 +1,14 @@
 import React from "react";
-import styles from "@/styles/Header.module.css";
 import MenuItem from "./MenuItem/MenuItem";
+import { PAGES } from "@/lib/utils";
+import styles from "@/styles/Header.module.css";
+import { useRouter } from "next/router";
 
-type HeaderProps = {};
+type HeaderProps = { selectedMenu: number };
 
-const Header: React.FC<HeaderProps> = () => {
+const Header: React.FC<HeaderProps> = ({ selectedMenu }) => {
+  const router = useRouter();
+
   return (
     <div className={styles.container}>
       <div className={styles.navigator}>
@@ -13,13 +17,15 @@ const Header: React.FC<HeaderProps> = () => {
           <div>Cabral</div>
         </div>
         <div className={styles.menu}>
-          <MenuItem name="Home" />
-          <MenuItem name="About" />
-          <MenuItem name="Services" />
-          <MenuItem name="Portfolio" />
-          <MenuItem name="Store" />
-          <MenuItem name="Blog" />
-          <MenuItem name="Contact" />
+          {Object.values(PAGES).map((page) => {
+            return (
+              <MenuItem
+                name={page.NAME}
+                isActive={page.ID === selectedMenu}
+                onClick={() => router.push(`/${page.URL}`)}
+              />
+            );
+          })}
         </div>
       </div>
     </div>

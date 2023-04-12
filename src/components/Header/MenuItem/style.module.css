@@ -2,4 +2,11 @@
   font-size: 16px;
   font-weight: 400;
   color: white;
+  cursor: pointer;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+
+.isActive {
+  border-bottom: 2px solid var(--accent-color);
 }
